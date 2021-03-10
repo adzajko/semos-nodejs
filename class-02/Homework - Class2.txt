@@ -1,0 +1,12 @@
+HomeWork:
+
+Create a node server using the http module
+Load the port information from the .env file
+Create handling for two requests, one with method GET and url '/files'
+one with method POST and URL: '/files'
+
+Method POST should write any content to a file. Bonus points if you manage to write content from the request body
+
+Method GET should return the content of the file as a response.
+
+All other url and methods should return a 404 Not Found

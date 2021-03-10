@@ -1,12 +1,51 @@
 require('dotenv').config();
 const http = require('http');
+const https = require('https');
 
+const callbacks = require('./callbacks');
+const { promiseDemoOne } = require('./promises');
+const { readF, writeF } = require('./fileSystem');
+
+writeF();
+
+readF((data) => {
+    console.log('Data retrieved');
+    console.log({data});
+});
+
+// https.createServer().listen();
+
+// callbacks.callBackOne(function(dbData) {
+//     console.log(dbData);
+// });
+
+
+/**
+ * All Promises need to be consumed via then and catch chain methods.
+ */
+// promiseDemoOne()
+//     .then(value => {
+//         console.log(value);
+//         console.log('Iteration 1!');
+//         return value;
+//     })
+//     .then(value => {
+//         console.log(value);
+//         console.log('Iteration 2!');
+//     })
+
+/**
+ * Null handling, if process env PORT does not exist, 3000 will be used instead
+ */
 const port = process.env.PORT || 3000;
 
 /**
  * Initiating the http server as well as adding a request listener.
  */
 const app = http.createServer((request, response) => {
+    /**
+     * Extracting the original URL as well as the queryParams
+     */
     const segmentedUrl = request.url.split('?');
     const defaultUrl = segmentedUrl[0];
     const queryParams = segmentedUrl[1];
