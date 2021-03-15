@@ -1,0 +1,7 @@
+Homework from class 3:
+
+Create an express application with 4 routes and a not found handler
+Route 1 should be a GET route that returns an object as a response;
+Route 2 should be a POST route that throws a 400 error when there is no body
+Route 3 should be a PUT route that throws a 400 error when there is no request parameters (id) or no body
+Route 4 should be a DELETE route that throws a 400 error if there is no request parameters
