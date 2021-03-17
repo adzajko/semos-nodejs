@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "The Black Keys",
+        "songs": [
+            {
+                "id": 1,
+                "name": "Gold on the Ceiling"
+            },
+            {
+                "id": 2,
+                "name": "Lonely Boy"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "The Brian Jonestown Massacre",
+        "songs": [
+            {
+                "id": 3,
+                "name": "Anemone"
+            },
+            {
+                "id": 4,
+                "name": "Pish"
+            },
+            {
+                "id": 5,
+                "name": "Fingertips"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Tame Impala",
+        "songs": [
+            {
+                "id": 6,
+                "name": "Let it happen"
+            },
+            {
+                "id": 7,
+                "name": "Elephant"
+            },
+            {
+                "id": 8,
+                "name": "Feels like we only go backwards"
+            },
+            {
+                "id": 9,
+                "name": "The less I know the better"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "The Dandy Warhols",
+        "songs": [
+            {
+                "id": 10,
+                "name": "Godless"
+            },
+            {
+                "id": 11,
+                "name": "Every day should be a holiday"
+            },
+            {
+                "id": 12,
+                "name": "We used to be friends"
+            },
+            {
+                "id": 13,
+                "name": "Mohammed"
+            },
+            {
+                "id": 14,
+                "name": "You are killing me"
+            },
+            {
+                "id": 15,
+                "name": "Get off"
+            }
+        ]
+    }
+]

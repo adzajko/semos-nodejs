@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Gold on the Ceiling",
+        "releaseDate": 2011,
+        "genre": "Rock",
+        "artist": {
+            "id": 1,
+            "name": "The Black Keys"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Lonely Boy",
+        "releaseDate": 2011,
+        "genre": "Rock",
+        "artist": {
+            "id": 1,
+            "name": "The Black Keys"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Anemone",
+        "releaseDate": 1996,
+        "genre": "Alternative",
+        "artist": {
+            "id": 2,
+            "name": "The Brian Jonestown Massacre"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Pish",
+        "releaseDate": 2015,
+        "genre": "Alternative",
+        "artist": {
+            "id": 2,
+            "name": "The Brian Jonestown Massacre"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Fingertips",
+        "genre": "Alternative",
+        "releaseDate": 2012,
+        "artist": {
+            "id": 2,
+            "name": "The Brian Jonestown Massacre"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Let it happen",
+        "genre": "Alternative",
+        "releaseDate": 2015,
+        "artist": {
+            "id": 3,
+            "name": "Tame Impala"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Elephant",
+        "genre": "Alternative",
+        "releaseDate": 2012,
+        "artist": {
+            "id": 3,
+            "name": "Tame Impala"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Feels like we only go backwards",
+        "genre": "Alternative",
+        "releaseDate": 2012,
+        "artist": {
+            "id": 3,
+            "name": "Tame Impala"
+        }
+    },
+    {
+        "id": 9,
+        "name": "The less I know the better",
+        "genre": "Alternative",
+        "releaseDate": 2015,
+        "artist": {
+            "id": 3,
+            "name": "Tame Impala"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Godless",
+        "releaseDate": 2000,
+        "genre": "Alternative",
+        "artist": {
+            "id": 4,
+            "name": "The Dandy Warhols"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Every day should be a holiday",
+        "genre": "Alternative",
+        "releaseDate": 1997,
+        "artist": {
+            "id": 4,
+            "name": "The Dandy Warhols"
+        }
+    },
+    {
+        "id": 12,
+        "name": "We used to be friends",
+        "genre": "Alternative",
+        "releaseDate": 2003,
+        "artist": {
+            "id": 4,
+            "name": "The Dandy Warhols"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Mohammed",
+        "genre": "Alternative",
+        "releaseDate": 2000,
+        "artist": {
+            "id": 4,
+            "name": "The Dandy Warhols"
+        }
+    },
+    {
+        "id": 14,
+        "name": "You are killing me",
+        "genre": "Alternative",
+        "releaseDate": 2016,
+        "artist": {
+            "id": 4,
+            "name": "The Dandy Warhols"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Get off",
+        "genre": "Alternative - Rock",
+        "releaseDate": 2000,
+        "artist": {
+            "id": 4,
+            "name": "The Dandy Warhols"
+        }
+    }
+]
