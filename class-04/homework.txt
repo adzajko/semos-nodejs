@@ -1,0 +1,3 @@
+In Class 03, we had a Swagger file for a Planetarium API.
+Your task will be to create that API in an MVC pattern using Models, Services, Controllers and Routes
+Bonus points if you implement a mock DB using a file.

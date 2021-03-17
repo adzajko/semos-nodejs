@@ -32,7 +32,7 @@ module.exports = class Artist {
 
   /**
    * Static method (don't make an instance to access it!) that retrieves all artists.
-   * @returns {array} Array of artists, parsed into javascript objects.
+   * @returns {Promise<Array>} Array of artists, parsed into javascript objects.
    */
   static getArtists() {
     return artistReader();

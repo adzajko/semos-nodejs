@@ -29,6 +29,10 @@ exports.addSong = async songInfo => {
   const findArtistIndex = allArtists.findIndex(
     artist => artist.id == songInfo.artist.id
   );
+  /**
+   * Ternary operator evaluation, if the condition before ? is met, the statement after ? will be executed. 
+   * Otherwise, the statement after : will be executed.
+   */
   allArtists[findArtistIndex].songs
     ? allArtists[findArtistIndex].songs.push({
         id: newSongId,
