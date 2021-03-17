@@ -148,5 +148,15 @@
             "id": 4,
             "name": "The Dandy Warhols"
         }
+    },
+    {
+        "id": "1ef80b53-7f13-4a95-9009-173b73014ff8",
+        "name": "Lepi Grome Moj",
+        "artist": {
+            "id": "af8d8117-9014-4bee-8ce9-15a4250469b0",
+            "name": "Ceca"
+        },
+        "releaseDate": "2005",
+        "genre": "Turbofolk"
     }
 ]
