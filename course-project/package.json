@@ -1,0 +1,20 @@
+{
+  "name": "course-project",
+  "version": "1.0.0",
+  "description": "The Course Project for the Semos NodeJS academy",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start-prod": "node server.js"
+  },
+  "keywords": [],
+  "author": "Antonij Djajkoski",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2"
+  }
+}
