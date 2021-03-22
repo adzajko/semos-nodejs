@@ -1,0 +1,430 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Poor Man's Spotify",
+    "description": "But Antonij, Spotify IS free?",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Music Library API"
+    }
+  ],
+  "tags": [
+    {
+      "name": "songs",
+      "description": "Collection of requests for songs."
+    },
+    {
+      "name": "artists",
+      "description": "Collection of requests for artists."
+    }
+  ],
+  "paths": {
+    "/songs": {
+      "get": {
+        "tags": [
+          "songs"
+        ],
+        "summary": "List of all songs.",
+        "description": "Retrieves a list of all songs.\n",
+        "operationId": "getAllSongs",
+        "responses": {
+          "200": {
+            "description": "List of all the songs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Song"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "songs"
+        ],
+        "summary": "Add a song.",
+        "description": "Adds a song.",
+        "operationId": "addSong",
+        "requestBody": {
+          "description": "Song info.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Song Created!"
+          },
+          "400": {
+            "description": "Invalid input!"
+          },
+          "409": {
+            "description": "Already exists!"
+          }
+        }
+      }
+    },
+    "/songs/{id}": {
+      "get": {
+        "tags": [
+          "songs"
+        ],
+        "summary": "Get a single song.",
+        "description": "Retrieves a song based on the provided ID.",
+        "operationId": "getSongById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the song",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Song info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Song"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid parameter for ID!"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "songs"
+        ],
+        "summary": "Edit a song's info.",
+        "description": "Edit a song's info.",
+        "operationId": "editSong",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the song",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Song"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Succesfully edited song!"
+          },
+          "400": {
+            "description": "Invalid input parameters!"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "songs"
+        ],
+        "summary": "Delete a song.",
+        "description": "Deletes a song that has the provided ID.",
+        "operationId": "deleteSong",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the song",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Song was deleted!"
+          },
+          "400": {
+            "description": "Invalid input parameter"
+          }
+        }
+      }
+    },
+    "/artists": {
+      "get": {
+        "tags": [
+          "artists"
+        ],
+        "summary": "List of all the artists.",
+        "description": "List of all the artists.",
+        "operationId": "getAllArtists",
+        "responses": {
+          "200": {
+            "description": "List of artists.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Artist"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "artists"
+        ],
+        "summary": "Add a new Artist.",
+        "description": "Add a new artist.",
+        "operationId": "addNewArtist",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Artist"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Artist created."
+          },
+          "400": {
+            "description": "Invalid input parameters!"
+          }
+        }
+      }
+    },
+    "/artists/{id}": {
+      "get": {
+        "tags": [
+          "artists"
+        ],
+        "summary": "Get an Artist's info.",
+        "description": "Get Artist by ID.",
+        "operationId": "getArtistById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Artist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Artist"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad input parameters!"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "artists"
+        ],
+        "summary": "Edit an artist's info.",
+        "description": "Edit an artist's info.",
+        "operationId": "editArtist",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Artist"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Artist was succesfully edited."
+          },
+          "400": {
+            "description": "Missing input!"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "artists"
+        ],
+        "summary": "Delete an artist.",
+        "description": "Delete an artist that has the ID.",
+        "operationId": "deleteArtist",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Artist was deleted."
+          },
+          "400": {
+            "description": "Invalid parameter for ID!"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Song": {
+        "required": [
+          "artist",
+          "genre",
+          "name",
+          "releaseDate"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "example": "Gold on the Ceiling"
+          },
+          "genre": {
+            "type": "string",
+            "example": "Rock"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2016-08-29T09:12:33.001Z"
+          },
+          "artist": {
+            "$ref": "#/components/schemas/ArtistSong"
+          }
+        }
+      },
+      "ArtistSong": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "example": "The Black Keys"
+          }
+        }
+      },
+      "SongInArtist": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "number",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "example": "Gold on the Ceiling"
+          }
+        }
+      },
+      "Artist": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "example": "The Black Keys"
+          },
+          "songs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SongInArtist"
+            }
+          }
+        }
+      }
+    }
+  }
+}
