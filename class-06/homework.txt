@@ -1,0 +1,1 @@
+Using express-session and ejs, create a landing page that is accessible when there is no session, and three more pages that are not accessible unless a session is active.
