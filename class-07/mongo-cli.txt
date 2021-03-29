@@ -1,0 +1,50 @@
+MONGO DB Docs - https://docs.mongodb.com/manual/crud/
+
+show dbs - Show all the databases currently on the server.
+use <db-name> - Load the selected db, or create it if it doesn't exist.
+show collections - Display the names of all the collections in the selected db
+
+COLLECTION <=> TABLE (in SQL)
+
+To interact with the DB:
+1. Select a DB using "use"
+2. Execute commands on a collection of the db.
+
+COMMANDS: (db.<db-name>)
+1. .find()
+2. add a single record - .insertOne()
+db.planets.insertOne({"name": "Venus","distanceFromSun": "5km"})
+
+3. .insertMany() - bulk insert using an array 
+4. .findOne() -  find the first document / object in the collection
+
+All functions can take a filter object as an argument
+
+5. .findOne({"name": "Nekoj"}) // Find one record that has the key "name" & value "Nekoj"
+6. .sort() - Sort Data by a filter object. Filter object IS mandatory
+7. .limit() - Limit the data retrieved using a number 
+8. .forEach() - iterate through the entire collection
+9. .toArray() - Bypass the default pagination of Mongo, and print out the entire collection as an array
+10. .count() - Numeric representation of all the documents that satisfy the find condition.
+11. .deleteOne() - Mandatory filter object, deletes the first record/document/object that satisfies the filter condition.
+12. .deleteMany() - Delete all the records / documents that satisfy the condition. If no condition is present, all documents will be deleted.
+13. .updateOne() - First argument is a filter that finds the document by that criteria. Separate by comma, next argument MUST be the atomic operator $set
+        db.collection.updateOne({condition: "something"}, {$set: {existingProperty: newValue, newProperty: newValue}})
+14. .updateMany() - If no argument is present to filter, it will update ALL the entries in the collection.
+15. .update() - Similiar to updateMany with one exception, it is not mandatory to use the $set operator, in which case it will delete the fields that are not written.
+16. db.dropDatabase() - Get instantly fired from your job by deleting all data
+-------------------
+
+OPERATORS:
+$set: Assign a value to a property or properties (Can also be used to add NEW properties),
+$gt: Greater than, usually used in find statements
+$lt: Lesser than
+$gte: Greater than or equal
+$lte: Lesser than or equal
+
+Create Mongo DB Atlas:
+
+1. Create account - https://www.mongodb.com/cloud/atlas/register
+2. Set up a Dev Cluster - Prefer AWS for Cluster driver
+3. Set up Database access by creating a user with full permissions
+4. Set up Network Access by either whitelisting your IP, or whitelisting ALL IPs.

@@ -1,0 +1,10 @@
+Write down all the commands needed to execute the following task
+
+1. Create a DB named Blog
+2. Create a collection named Posts
+3. Create a collection named Comments
+4. Insert 1 Post with the fields title and content
+5. Insert 10 Comments with the fields of your choosing
+6. Edit the Post to add another field (tags)
+7. Delete three comments that satisfy a criteria of their titles or any string property being shorter than 6 characters
+8. Drop the entire Database.
