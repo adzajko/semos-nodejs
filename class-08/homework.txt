@@ -1,0 +1,18 @@
+Create two collections, Artists and Songs.
+
+    Collection One: Artists
+    An artist document should be validated with the following fields:
+        artistName: string,
+        genre: string,
+        artistAvatar: string,
+        songs: Field should be a string array (of ids), that holds references to the Songs collection.
+
+    Collection Two: Songs
+    A song document should be validated with the following fields:
+        songName: string,
+        songDuration: string,
+        releaseDate: Date,
+        artist: string, which should be the id of the artist.
+
+
+    - Create an aggregation that fetches all artists with their songs
