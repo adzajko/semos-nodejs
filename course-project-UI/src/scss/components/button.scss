@@ -1,0 +1,25 @@
+.app-btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--app-primary);
+  border: 2px solid var(--app-primary);
+  color: var(--app-font);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.15s ease-out;
+  box-shadow: 2px 2px 5px var(--app-grey);
+}
+
+.app-btn:hover {
+  text-decoration: none;
+  background-color: var(--app-font);
+  color: var(--app-primary);
+}
+
+.delete-btn {
+  color: rgb(158, 62, 62);
+  align-self: center;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 10px;
+}

@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.layout-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+
+  &__header {
+    background-color: var(--app-primary);
+    position: relative;
+    padding: 10px;
+    box-shadow: 2px 2px 5px var(--app-secondary);
+  }
+
+  &__main {
+    background-color: var(--app-grey);
+    padding: 2% 5%;
+  }
+
+  &__footer {
+    background-color: var(--app-secondary);
+    padding: 10px;
+    box-shadow: -2px -2px 5px var(--app-secondary);
+  }
+}
+
+.artist-container {
+  margin: 0 0 0 15%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: masonry;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.songs-container {
+  margin: 0 0 0 20%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
